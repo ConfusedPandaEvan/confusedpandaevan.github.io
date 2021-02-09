@@ -1,0 +1,83 @@
+h2{
+    display: center;
+}
+body{
+    font-family: Scream Real;
+    font-style: normal;
+    font-weight: normal;
+    background-color: #373934;
+    margin:0;
+
+}
+img {
+    width: 1440px;
+}
+.navbar {
+    background: #202020;
+    padding: 1em;
+  }
+
+
+.navbar .container {
+ 
+    display: flex;
+    flex-direction: row;
+    place-content: space-between;
+  }
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+ a{
+    display:inline;
+    
+    text-align: left;
+    vertical-align: middle;
+    margin-right:10px;
+}
+.navbar .logo {
+    color: #FF1102;
+  }
+
+  nav li span {
+    color: #FF5D02;
+  }
+  nav li a {
+    color: #FF1102;
+    font-size: 1.3em;
+    text-align: right;
+  }
+  nav li a:hover {
+    color: #FF1102;
+  }
+
+.Makers ul {
+    display: flex;
+  }
+.Makers ul li {
+    margin: 0 1em;
+  }
+.Makers {
+    background: var(--primary-color);
+    color: white;
+  }
+  
+  .Makers li {
+    background: #535550;
+    text-align: center;
+    padding: 2em 1em;
+    width: 80%;
+    margin: 0 auto 5em auto;
+    border-radius: 3em;
+  }
+  
+  .Makers li img {
+    width: 10em;
+    height: 10em;
+    border: 5px solid #535550;
+    border-radius: 50%;
+    margin-top: -4.5em;
+  }
+  
