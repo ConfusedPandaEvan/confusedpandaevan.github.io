@@ -1,6 +1,11 @@
-h2{
+
+/* A different color has been used for the synopsis to less-emphasize than the other elements */
+.Poster h2{
     display: center;
+    color: #A7A57A;
 }
+
+/* Basic font for the website is Scream Real */
 body{
     font-family: Scream Real;
     font-style: normal;
@@ -9,17 +14,39 @@ body{
     margin:0;
 
 }
-img {
-    width: 1440px;
+
+/* This is to make the going back to top smooth */
+html{
+    scroll-behavior: smooth;
 }
+
+#myBtn {
+    /* This has been implemented from W3School */
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 15%; /* Place the button at the bottom of the page */
+    right: 13%; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    padding: 0 0 -2 -2;
+    cursor: pointer; /* Add a mouse pointer on hover */
+    background: none;
+    display: flex;
+    
+}
+/* This is the start of Navigation Bar Styling */
 .navbar {
     background: #202020;
     padding: 1em;
   }
-
-
+/* Flex box has been used to maintain structure even if the screen size change */
+.container {
+    display: flex;
+    flex-direction: row;
+    place-content: space-between;
+}
 .navbar .container {
- 
     display: flex;
     flex-direction: row;
     place-content: space-between;
@@ -29,8 +56,7 @@ ul {
     margin: 0;
     padding: 0;
   }
-
- a{
+a{
     display:inline;
     
     text-align: left;
@@ -39,32 +65,77 @@ ul {
 }
 .navbar .logo {
     color: #FF1102;
-  }
-
-  nav li span {
-    color: #FF5D02;
-  }
-  nav li a {
+    text-decoration: none;
+    font-size: 2em;
+}
+.navbar nav ul {
+    display: flex;
+}
+nav li a {
     color: #FF1102;
-    font-size: 1.3em;
     text-align: right;
-  }
-  nav li a:hover {
+    display: block;
+    padding: .5em;
+    text-decoration: none;
+    font-size: 1.3em;
+}
+/* span has been used to change part of the items' color */
+nav li span{
+    color: #FF5D02;
+}
+/* when the mouse icon hovers over the item, the whole item color changes */
+nav li :hover {
     color: #FF1102;
   }
+nav ul.nav-items {
+    margin-top: 5em;
+  }
+.navbar nav ul.nav-items {
+    margin: 0;
+  }
 
+/* This is the styling for the Poster section */
+.Poster {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.Poster h3{
+    vertical-align: middle;
+}
+.Poster img {
+    width: 100%;
+}
+
+/* The text for Makers section is in white to increase readability */
+.Makers{
+    display: flex;
+    text-align: center;
+    color: #ffffff;
+    font-size: 1em;
+    padding: 0.5em 0.5em;
+}
+.Makers .container{
+    display: flex;
+    flex-direction: column;
+    margin: 5 5 5 5;
+    
+}
+.Makers h2{
+    color: #FF1102;
+    font-size: 2em;
+}
 .Makers ul {
     display: flex;
-  }
+    text-align: center;
+    flex-direction: row;
+}
 .Makers ul li {
     margin: 0 1em;
-  }
-.Makers {
-    background: var(--primary-color);
-    color: white;
-  }
-  
-  .Makers li {
+}
+
+/* This section makes each elements in the box seperately and with unified design */
+.Makers li {
     background: #535550;
     text-align: center;
     padding: 2em 1em;
@@ -72,12 +143,75 @@ ul {
     margin: 0 auto 5em auto;
     border-radius: 3em;
   }
-  
-  .Makers li img {
+.Makers li img {
     width: 10em;
     height: 10em;
     border: 5px solid #535550;
     border-radius: 50%;
-    margin-top: -4.5em;
+    margin-top: -5em;
   }
+
+/* This is to change part of the text to have a different color, same as the items in the navbar */
+.Makers h2 span{
+    color: #FF5D02;
+}
+
+/* This is to change the alignment of each Makers element when the screen size is small */
+@media only screen and (max-width: 800px) {
   
+     .Makers{
+        padding:10px;
+        margin:10px;
+        justify-content: center;
+    } 
+
+    
+    .Makers ul {
+        display: flex;
+        flex-direction: column;
+        /*padding-bottom: 20px;*/
+        justify-content: center;
+        margin-left:10%;
+        
+    }
+    .container ul li{
+        
+        margin-top: 50px;
+
+    }
+}
+
+/* This is the section with the video */
+.Movie {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: #FF1102;
+    font-size: 2em;
+}
+.Movie h2 span{
+    color: #FF5D02;
+}
+.Movie video{
+    margin-top: -1em;
+    width: 100%;
+}
+
+/* This is the section with a link to a film Mosquito from 1995 */
+.Meanwhile{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: #FF1102;
+    font-size: 2em;
+    padding: 0.5em 0.5em;
+}
+
+.Meanwhile h2 span{
+    color: #FF5D02;
+}
+
+.Meanwhile a{
+    text-align: center;
+    color: #A7A57A;
+}

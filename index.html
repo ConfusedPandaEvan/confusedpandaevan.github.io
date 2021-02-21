@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>IHateMosquitoes</title>
+    <link rel="stylesheet" href = "css/style.css">
+    <script src ="./button.js">
+    </script>
+</head>
+<body>
+    <!-- this is the start of the navbar -->
+    <div class = "navbar">
+        <!-- this is the navigation bar to go to each part of the page-->
+        <div class = "container">
+            <a class="logo" href="#Poster">M</a>
+            <!--this is the container for the navigation menus-->
+            <nav>
+                <ul class="nav-items">
+                    <!-- span was used for the list items on nav bar to have a different color -->
+                    <li><a href="#Makers">M<span>akers</span></a></li>
+                    <li><a href="#Movie">M<span>ovie</span></a></li>
+                    <li><a href="#Meanwhile">M<span>eanwhile</span></a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </div>
+
+    <!-- This is the "Go to Top" button -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">
+    <img src="images/Upbutton.svg" id = "Up1" alt = "Main Up Button">
+    <img src="images/UpButton2.svg" id = "Up2" style = "display:none" alt="Hover">
+    </button>
+
+    <!-- This is the Poster and Synonpsis Section -->
+    <div class = "Poster">
+            <h3> This is a project for Communication Lab</h3>
+            <h2> Synopsis</h2>
+            <p>One day a worker has been bitten by a mosquito... </p>
+            <p>Little did he know the terror that such little creature could bring...</p>
+            <a name = "Poster"></a>
+            <img src="images/Mosquitoes.png" alt = "Quality Poster" >
+    </div>
+
+
+    
+    <!-- This section is the makers for the 30MFF film -->
+    <section class="Makers">
+            <div class="container">
+                <a name = "Makers"></a>
+                <h2>M<span>akers</span></h2>
+                <!-- ul is for each li elements containing image of the maker, a quote, and their name -->
+                <ul>
+                    <li>
+                        <img src="images/MaherAsfour.png" alt="The Doctor">
+    
+                        <blockquote>"I didn't know it will go this BIG."</blockquote>
+                        <cite>- Maher Asfour -The Doctor-</cite>
+                    </li>
+                    <li>
+                        <img src="images/UmangMishra.png" alt="The Dad">
+    
+                        <blockquote>"I got into this as Maher's roomate."</blockquote>
+                        <cite>- Umang Mishra -The Dad-</cite>
+                    </li>
+                    <li>
+                        <img src="images/RumailMemon.png" alt="The Coworker">
+    
+                        <blockquote>"Dunno how I ended up here."</blockquote>
+                        <cite>- Rumail Memon -The Coworker-</cite>
+                    </li>
+                    <li>
+                            <img src="images/Evan.png" alt="The Victim">
+        
+                            <blockquote>"The greatest movie ever created with no budget."</blockquote>
+                            <cite>- Evan Lim -The Victim-</cite>
+                    </li>
+                </ul>
+            </div>
+    </section>
+
+    <!-- the movie section contains the 1 min video of 30MFF -->
+    <div class = "Movie">
+            <a name = "Movie"></a>
+            <h2>M<span>ovie</span></h2>
+            <video controls>
+                    <source src="images/Mosquitoes.mp4" type="video/mp4">
+             </video>  
+    </div>
+
+    <!-- The  Meanwhile section contains a hyperlink to an actual movie named Mosquito created in 1995. It's entertaining! -->
+    <!-- Breaklines were used to align the hyperlink in the middle -->
+    <div class="Meanwhile">
+            <a name = "Meanwhile"></a>
+            <h2>M<span>eanwhile</span></h2>
+            <a href="https://www.youtube.com/watch?v=n2cxaufdHrQ&ab_channel=RhineholtTillman">Link to Movie: Mosquito 1995</a>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            
+    </div>
+    
+</body>
+</html>
