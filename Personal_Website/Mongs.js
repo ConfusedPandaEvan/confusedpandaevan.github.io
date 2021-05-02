@@ -1,4 +1,6 @@
 export class Mong {
+    
+    //This is the code for Mongs
     constructor(img, stageWidth) {
         this.img = img;
 
@@ -14,12 +16,13 @@ export class Mong {
         this.mongWidthHalf = this.mongWidth / 2;
         this.x = - (this.mongWidth);
         this.y = 0;
+        
         this.speed = -(Math.random() * 2 + 1);
 
         this.fps = 5;
         this.fpsTime = 1000 / this.fps;
     }
-
+//This is a function to draw the Mong
     draw(ctx, t, dots) {
         if (!this.time) {
             this.time = t;
@@ -37,7 +40,7 @@ export class Mong {
         }
         this.animate(ctx);
     }
-
+//animates the Mong to make it look like it is moving and swimming fps is based on the time.
     animate(ctx) {
         this.x -= this.speed;
         
