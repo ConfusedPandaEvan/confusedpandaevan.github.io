@@ -1,7 +1,7 @@
 import {
     Duck
 } from "./duck.js"
-
+//This is a controller for the number of Ducks in the screen
 export class RubberDucks {
     constructor() {
         this.img = new Image();
@@ -15,7 +15,7 @@ export class RubberDucks {
         this.cur = 0;
         this.isLoaded = false;
     }
-
+//resizes based on the screen size
     resize(stageWidth,stageHeight) {
         this.stageWidth = stageWidth;
         this.stageHeight = stageHeight;
@@ -39,7 +39,7 @@ export class RubberDucks {
                 this.cur = 0;
                 this.addDuck();
             }
-
+//if the duck moves out of the screen, the duck is removed and a new duck is drawn
             for (let i = this.items.length - 1; i >= 0; i--) {
                 const item = this.items[i];
                 if (item.x < -item.width) {
