@@ -59,7 +59,7 @@ export class Duck {
         );
         ctx.restore();
     }
-
+//This will calculate the Y value for the ducks based on the x,y cordinates of the front hill
     getY(x, dots) {
         for (let i = 1; i < dots.length; i++) {
             if (x >= dots[i].x1 && x <= dots[i].x3) {
@@ -72,7 +72,7 @@ export class Duck {
             rotation: 0
         };
     }
-
+//this will divide the front x cordinate and the back x cordinate based on the duck's position and get a y value based on the quadratic function
     getY2(x, dot) {
         const total = 200;
         let pt = this.getPointOnQuad(dot.x1, dot.y1, dot.x2, dot.y2, dot.x3, dot.y3, 0);
@@ -92,7 +92,7 @@ export class Duck {
     getQuadValue(p0, p1, p2, t) {
         return (1-t) * (1-t) * p0 + 2 * (1-t) * t * p1 + t * t * p2;
     }
-
+//This will give the rotation for the duck based on the quadratic function and calculating the tangent line
     getPointOnQuad(x1, y1, x2, y2, x3, y3, t) {
         const tx = this.quadTangent(x1, x2, x3, t);
         const ty = this.quadTangent(y1, y2, y3, t);
@@ -105,7 +105,7 @@ export class Duck {
             rotation: rotation,
         };
     }
-
+//function I got from wikipedia on tangent line from a curve
     quadTangent(a, b, c, t) {
         return 2 * (1-t) * (b - a) + 2 * (c-b) * t;
     }
