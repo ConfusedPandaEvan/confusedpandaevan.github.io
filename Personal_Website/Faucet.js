@@ -1,4 +1,5 @@
 export class Faucet {
+    //Constructor for the faucet
     constructor() {
         this.img = new Image;
 
@@ -13,7 +14,7 @@ export class Faucet {
         this.fps = 10;
         this.fpsTime = 5000 / this.fps;
     }
-
+    //Resize to Screen Size
     resize(stageWidth, stageHeight) {
         this.stageWidth = stageWidth;
         this.stageHeight = stageHeight;
@@ -21,7 +22,7 @@ export class Faucet {
         this.x = this.stageWidth - this.imgWidth;
         this.y = this.imgHeight;
     }
-
+//Draw faucet on the canvas based on the fps
     draw(ctx, t) {
         
         if (!this.time) {
