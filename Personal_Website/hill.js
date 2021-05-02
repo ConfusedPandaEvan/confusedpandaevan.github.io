@@ -13,7 +13,7 @@ export class Hill {
 
         this.points = [];
         
-        // gap is larger than the stage so that boats can come in from the side of the screen more naturally
+        // gap is larger than the stage so that ducks can come in from the side of the screen more naturally
         this.gap = Math.ceil(this.stageWidth / (this.total - 2));
         
         for (let i = 0; i < this.total; i++) {
@@ -31,7 +31,7 @@ export class Hill {
 
         let cur = this.points[0];
         let prev = cur;
-        // each coordinates will be used to track boats
+        // each coordinates will be used to track ducks
         let dots = [];
         cur.x += this.speed;
         
@@ -41,6 +41,7 @@ export class Hill {
                 y: this.getY()
             });
         } else if (cur.x > this.stageWidth + this.gap) {
+            //this will delete the point that is outside of the screen
             this.points.splice(-1);
         }
 
@@ -89,7 +90,6 @@ export class Hill {
     
     
     
-
     getY() {
         var scroll = {
             x: undefined,
@@ -101,7 +101,7 @@ export class Hill {
         const max = this.stageHeight / 2;
         return min + Math.random() * max;
     }
-
+//y value will be random within a range but it will shift based on the user's scroll
     setY(value){
         for (let i = 0; i < this.points.length; i++){
             if (i == 5){
